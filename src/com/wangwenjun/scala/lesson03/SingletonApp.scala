@@ -8,5 +8,7 @@ object SingletonApp {
 
     val companion: Companion = Companion("Hello")
     companion.simplePrint()
+    val i:Int = 10
+    i.max(11)
   }
 }
