@@ -4,7 +4,7 @@ package com.wangwenjun.scala.lesson10
   *
   * @author:Alex Wang <br/>
   *              http://wangwenjun0609.taobao.com
-  ***************************************/
+  * **************************************/
 object Test extends App {
 
   def x(): String = {
@@ -35,4 +35,19 @@ object Test extends App {
   }
 
   private val b: B = new B(10)
+
+
+  class Creature {
+    val range: Int = 10
+    val env: Array[Int] = new Array[Int](range)
+  }
+
+  class Person extends {
+    override val range: Int = 3
+  } with Creature
+
+
+  val p: Person = new Person
+  println(p.range)
+  println(p.env.length)
 }

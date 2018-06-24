@@ -17,6 +17,8 @@ public class TestJava
     {
         A a = new B(new String[]{"sdfs"});
         System.out.println(a.size);
+
+
     }
 
     static class A

@@ -11,9 +11,7 @@ class ArrayElement(conts: Array[String]) extends Element {
 
   override val contents = conts
 
-  val y: String = "ArrayElement-Y"
-
-  def test(): Unit = {
-    println("ArrayElement-test")
+  def test(){
+    println("======ArrayElement=======")
   }
 }
