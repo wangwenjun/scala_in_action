@@ -16,8 +16,11 @@ abstract class Element {
 
   def contents(): Array[String]
 
-  val height: Int = contents().length
+  def height: Int = {
+    println("====================")
+    contents().length
+  }
 
-  val width: Int = if (height == 0) 0 else contents().map(_.length).max
+  def width: Int = if (height == 0) 0 else contents().map(_.length).max
 
 }

@@ -5,12 +5,10 @@ package com.wangwenjun.scala.lesson10
   * @author:Alex Wang <br/>
   *              http://wangwenjun0609.taobao.com
   ***************************************/
-class LineElement(s: String) extends ArrayElement(conts = Array(s)) {
+class XElement(array: Array[String], override val height: Int, override val width: Int) extends Element {
+  override val x = "XElement"
 
-
-  override def test(): Unit = {
-    println("LineElement-test")
+  override def contents() = {
+    array
   }
-
-  override val y: String = "LineElement-Y"
 }
