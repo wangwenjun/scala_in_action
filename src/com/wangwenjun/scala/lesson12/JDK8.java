@@ -5,13 +5,20 @@ import scala.actors.threadpool.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+import static java.util.stream.Collectors.toList;
+
 /***************************************
  * @author:Alex Wang <br/>
  * http://wangwenjun0609.taobao.com
  ***************************************/
 public class JDK8
 {
-
+    public static void main(String[] args)
+    {
+        List<String> list = Arrays.asList(new String[]{"AB5", "XY1", "ER2"});
+        List<Character> result = list.stream().map(s -> s.substring(2).charAt(0)).distinct().collect(toList());
+        result.forEach(System.out::println);
+    }
 
 }
 

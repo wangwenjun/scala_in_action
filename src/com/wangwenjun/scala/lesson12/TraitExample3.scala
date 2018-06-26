@@ -6,7 +6,7 @@ import java.io.{File, FileWriter}
   *
   * @author:Alex Wang <br/>
   *              http://wangwenjun0609.taobao.com
-  ***************************************/
+  * **************************************/
 object TraitExample3 extends App {
 
   val transaction: Transaction = new Transaction with ConsoleLogger with FileLogger
