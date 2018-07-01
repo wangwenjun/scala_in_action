@@ -4,7 +4,7 @@ package com.wangwenjun.scala.lesson14
   *
   * @author:Alex Wang <br/>
   *              http://wangwenjun0609.taobao.com
-  ***************************************/
+  * **************************************/
 object PatternMatchExample1 extends App {
 
   val bools: Seq[Boolean] = Seq(false, true)
@@ -53,7 +53,7 @@ object PatternMatchExample1 extends App {
       x <- seq3
     } {
       val result = x match {
-        case Y => "found y =" + x
+        case `y` => "found y =" + x
         case _: Int => "int " + x
       }
       println(result)
@@ -61,4 +61,16 @@ object PatternMatchExample1 extends App {
   }
 
   printMe(2)
+
+  println("=================")
+  for (s <- seq) {
+    val result: String = s match {
+      case 1 => "Int 1"
+      case _: Int | _: Double => "I am number type " + s
+      case "hello" => s.toString
+      case _: String => "I am string " + s
+      case _ => "unexpected"
+    }
+    println(result)
+  }
 }
