@@ -25,7 +25,7 @@ object PartialFunctionExample extends App {
   //will throw java.lang.ArithmeticException: / by zero exception
   //println(divide(0))
 
-  val dividePF: PartialFunction[Int, Int] = new PartialFunction[Int, Int] {
+  val dividePF: PartialFunction[Int, Int] = new PartialFunction[Int, Int]() {
     def apply(x: Int) = 100 / x
 
     def isDefinedAt(x: Int) = x != 0
