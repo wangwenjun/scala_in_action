@@ -35,11 +35,12 @@ object GenericExample1 extends App {
   val pair: Pair[String] = new Pair[String]("Alex", "Wang")
   println(pair.firstLessThanSecond)
 
+
+  class Person[T1, T2](val first: T1, val second: T2)
+
+  class Pair[T <: Comparable[T]](val first: T, val second: T) {
+    def firstLessThanSecond: Boolean = if (first.compareTo(second) < 0) true else false
+  }
+
 }
 
-class Person[T1, T2](val first: T1, val second: T2)
-
-class Pair[T <: Comparable[T]](val first: T, val second: T) {
-
-  def firstLessThanSecond: Boolean = if (first.compareTo(second) < 0) true else false
-}

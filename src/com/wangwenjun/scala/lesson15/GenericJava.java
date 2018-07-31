@@ -1,7 +1,8 @@
 package com.wangwenjun.scala.lesson15;
 
+import java.io.Serializable;
 import java.lang.reflect.Array;
-import java.util.Arrays;
+import java.util.*;
 
 /***************************************
  * @author:Alex Wang <br/>
@@ -11,7 +12,6 @@ public class GenericJava
 {
     public static void main(String[] args)
     {
-
         Integer[] result = convert(Integer.class, 1, 2);
         System.out.println(result[0]);
         System.out.println(result[1]);
@@ -24,5 +24,15 @@ public class GenericJava
         T[] result = (T[]) Array.newInstance(type, 2);
 
         return Arrays.copyOf(source, 2, (Class<? extends T[]>) result.getClass());
+    }
+
+    private interface F extends Serializable, Comparable<F>
+    {
+
+    }
+
+    private static <T extends Serializable & Comparable<T>> void test(T t)
+    {
+
     }
 }
