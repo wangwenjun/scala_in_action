@@ -22,7 +22,6 @@ public class GenericJavaExample2
 //        new DG(new X<Object>()); //correct
 
         List<? extends Animal> list = new ArrayList<Human>();
-
     }
 
     private static class X<T>

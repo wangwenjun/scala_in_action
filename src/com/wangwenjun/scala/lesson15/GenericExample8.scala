@@ -4,7 +4,7 @@ package com.wangwenjun.scala.lesson15
   *
   * @author:Alex Wang <br/>
   * @taobao:http: //wangwenjun0609.com
-  * **************************************/
+  ***************************************/
 object GenericExample8 extends App {
 
   abstract class Function[IN, OUT] {

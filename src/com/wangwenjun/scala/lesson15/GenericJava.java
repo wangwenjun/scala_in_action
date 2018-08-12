@@ -19,11 +19,11 @@ public class GenericJava
 
     private static <T> T[] convert(Class<T> type, T a, T b)
     {
-        Object[] source = Arrays.asList(a, b).toArray(new Object[2]);
+        Object[] source = new Object[]{a, b};//Arrays.asList(a, b).toArray(new Object[2]);
 
-        T[] result = (T[]) Array.newInstance(type, 2);
+        T[] result = (T[]) Array.newInstance(type, source.length);
 
-        return Arrays.copyOf(source, 2, (Class<? extends T[]>) result.getClass());
+        return Arrays.copyOf(source, source.length, (Class<? extends T[]>) result.getClass());
     }
 
     private interface F extends Serializable, Comparable<F>

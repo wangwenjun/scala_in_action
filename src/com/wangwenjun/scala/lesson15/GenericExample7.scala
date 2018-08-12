@@ -4,10 +4,16 @@ package com.wangwenjun.scala.lesson15
   *
   * @author:Alex Wang <br/>
   * @taobao:http: //wangwenjun0609.com
-  * **************************************/
+  ***************************************/
 object GenericExample7 extends App {
 
-  class Person[+T] {
+  class Person[+T](t: T) {
+    println(t)
+
+    def test(): Unit = {
+      println(t)
+    }
+
     def fun(): T = {
       null.asInstanceOf[T]
     }
@@ -20,4 +26,5 @@ object GenericExample7 extends App {
     }
   }
 
+  new Person[String]("Alex").test()
 }

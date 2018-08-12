@@ -34,7 +34,7 @@ object GenericExample4 extends App {
 
   /**
     *
-    * C:<x<:T
+    * C:<X<:T
     *
     * @tparam X
     */
