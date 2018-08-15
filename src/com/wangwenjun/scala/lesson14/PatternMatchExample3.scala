@@ -17,9 +17,9 @@ object PatternMatchExample3 extends App {
 
   val tuples = Seq(
     ("Scala", "Java", "Clojure")
-    , ("Alex", "Wen", "Jun")
-    , ("Kafka", "spark")
-    , ("Kafka", "spark", "sdfdsfds", "dsfdsfds")
+  , ("Alex", "Wen", "Jun")
+  , ("Kafka", "spark")
+  , ("Kafka", "spark", "sdfdsfds", "dsfdsfds")
   )
 
   for (t <- tuples) {
