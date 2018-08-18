@@ -6,7 +6,7 @@ import java.nio.file.{Files, Path, Paths}
   *
   * @author:Alex Wang <br/>
   * @taobao:http: //wangwenjun0609.taobao.com
-  * **************************************/
+  ***************************************/
 object ImplicitExample5 extends App {
 
   def firstLessThanSecond[T <% Ordered[T]](first: T, second: T): Boolean = {
@@ -31,4 +31,7 @@ object ImplicitExample5 extends App {
       if (this.age.age < that.age) -1 else if (this.age.age == that.age) 0 else 1
     }
   }
+
+  implicit def ageToRichAge(age: Age): RichAge = new RichAge(age)
+
 }
