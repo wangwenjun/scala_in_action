@@ -1,6 +1,7 @@
 package com.wangwenjun.scala.lesson16;
 
 import java.awt.*;
+import java.io.IOException;
 
 /***************************************
  * @author:Alex Wang <br/>
@@ -8,7 +9,7 @@ import java.awt.*;
  ***************************************/
 public class JavaLambda
 {
-    public static void main(String[] args)
+    public static void main(String[] args) throws IOException
     {
         new Thread(() -> System.out.println("=======")).start();
         Button button = new Button("Test");

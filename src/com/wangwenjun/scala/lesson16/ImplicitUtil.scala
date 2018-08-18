@@ -12,6 +12,10 @@ import scala.io.Source
   ***************************************/
 object ImplicitUtil {
 
+  case class Delimiters(left: String, right: String)
+
+  implicit def delimiters: Delimiters = Delimiters("$$$", "$$$")
+
   class RichFile(file: File) {
     def read(): String = {
       Source.fromFile(file).mkString
