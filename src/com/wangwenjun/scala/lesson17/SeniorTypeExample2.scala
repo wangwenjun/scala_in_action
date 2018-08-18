@@ -4,7 +4,7 @@ package com.wangwenjun.scala.lesson17
   *
   * @author:Alex Wang <br/>
   * @taobao:http: //wangwenjun0609.taobao.com
-  * **************************************/
+  ***************************************/
 object SeniorTypeExample2 extends App {
 
   class Document {
@@ -50,4 +50,11 @@ object SeniorTypeExample2 extends App {
   }
 
   val x: book.type = null
+
+  val map: Map[String, Int] = Map()
+
+  val m: String Map Int = Map()
+
+  val i:Int=10
+
 }
