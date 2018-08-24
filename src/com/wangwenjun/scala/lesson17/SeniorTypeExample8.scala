@@ -12,7 +12,7 @@ object SeniorTypeExample8 extends App {
   }
 
   class C {
-    this: T =>
+    self: T =>
     val factor: Int = 2
 
     override def add(x: Int, y: Int): Int = x * 10 + y
