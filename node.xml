@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<entity>
+    <name>Chris</name>
+    <age>30</age>
+    <address>CHINA</address>
+    <title>Engineer</title>
+    <gender>false</gender>
+    <salary currency="USD">22315.0</salary>
+  </entity>
